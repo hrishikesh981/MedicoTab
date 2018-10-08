@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Medico</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="nav_bottom_acc">Account</string>
+    <string name="nav_bottom_hist">Recent</string>
+    <string name="nav_bottom_log">Logout</string>
+    <string name="nav_bottom_home">Home</string>
+    <string name="acc_name">Name</string>
+    <string name="email_id">email.com</string>
+    <string name="address">Address</string>
+    <string name="email">email.id@gmail.com</string>
+    <string name="acc_phone">73874295</string>
+</resources>
