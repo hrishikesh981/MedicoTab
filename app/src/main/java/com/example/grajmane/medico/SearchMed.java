@@ -2,6 +2,7 @@ package com.example.grajmane.medico;
 
 import android.app.DownloadManager;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.firestore.CollectionReference;
@@ -30,8 +32,7 @@ public class SearchMed extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    private FirebaseFirestore db=FirebaseFirestore.getInstance();
-    private CollectionReference medRef=db.collection("medicines");
+
 
 
     private NoteAdapter adapter;
@@ -76,18 +77,25 @@ public class SearchMed extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        Query query=medRef.orderBy("name");
+
 
         // Inflate the layout for this fragment
-        View root=inflater.inflate(R.layout.fragment_search_med, container, false);
-//        FirestoreRecyclerOptions<Medicine> options=new FirestoreRecyclerOptions.Builder<Medicine>().setQuery(query,Medicine.class).build();
-//        adapter= new NoteAdapter(options);
-//        RecyclerView recyclerView=root.findViewById(R.id.recycler_view);
-//        recyclerView.setHasFixedSize(true);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-//        recyclerView.setAdapter(adapter);
-//        root.findViewById(R.id.recycler_view);
-        return root;
+        View view=inflater.inflate(R.layout.fragment_search_med, container, false);
+        Button medbutt=(Button) view.findViewById(R.id.medfragbutt);
+        medbutt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent pSearchMap=new Intent(getActivity(),NewAct.class);
+                startActivity(pSearchMap);
+
+
+
+
+            }
+        });
+
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
