@@ -80,13 +80,13 @@ public class SearchMed extends Fragment {
 
         // Inflate the layout for this fragment
         View root=inflater.inflate(R.layout.fragment_search_med, container, false);
-        FirestoreRecyclerOptions<Medicine> options=new FirestoreRecyclerOptions.Builder<Medicine>().setQuery(query,Medicine.class).build();
-        adapter= new NoteAdapter(options);
-        RecyclerView recyclerView=root.findViewById(R.id.recycler_view);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(adapter);
-        root.findViewById(R.id.recycler_view);
+//        FirestoreRecyclerOptions<Medicine> options=new FirestoreRecyclerOptions.Builder<Medicine>().setQuery(query,Medicine.class).build();
+//        adapter= new NoteAdapter(options);
+//        RecyclerView recyclerView=root.findViewById(R.id.recycler_view);
+//        recyclerView.setHasFixedSize(true);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+//        recyclerView.setAdapter(adapter);
+//        root.findViewById(R.id.recycler_view);
         return root;
     }
 
